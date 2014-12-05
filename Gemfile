@@ -22,7 +22,7 @@ group :development, :test do
   gem 'ruby-prof'
   gem 'sqlite3'
   gem 'spring'
-  gem 'rspec'
+  gem 'rspec-rails'
   gem 'spring-commands-rspec'
 end
 
