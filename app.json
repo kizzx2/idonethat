@@ -1,0 +1,7 @@
+{
+  "name": "iDoneThat",
+  "description": "A Heroku ready Rails clone of iDoneThis",
+  "repository": "https://github.com/kizzx2/idonethat",
+  "keywords": ["idonethis", "heroku"],
+  "addons": ["cloudmailin", "mandrill", "heroku-postgresql", "scheduler"]
+}
