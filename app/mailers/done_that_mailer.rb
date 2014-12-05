@@ -7,6 +7,6 @@ class DoneThatMailer < ActionMailer::Base
   end
 
   def digest
-    mail subject: "iDoneThat: Digest"
+    mail subject: "iDoneThat: Digest #{Time.zone.today}"
   end
 end
