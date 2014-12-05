@@ -3,10 +3,10 @@ class DoneThatMailer < ActionMailer::Base
   layout 'application'
 
   def prompt(to_member)
-    mail to: to_member.email
+    mail to: to_member.email, subject: "iDoneThat: Prompt"
   end
 
   def digest
-    mail
+    mail subject: "iDoneThat: Digest"
   end
 end
