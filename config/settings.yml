@@ -1,0 +1,2 @@
+idonethat:
+  from_email: <%= ENV['IDONETHAT_FROM_EMAIL'] %>

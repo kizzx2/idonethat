@@ -1,0 +1,15 @@
+Here's what people got done yesterday:
+
+- Member.all.each do |m|
+  h3 #{m.name} (#{m.email})
+
+  - entries = m.yesterday_entries.to_a
+  - if entries.empty?
+    strong #{m.name} <em>did nothing yesterday!</em>
+    - if m.idle_days > 1
+      span #{m} has been doing nothing for #{m.idle_days} days!
+
+  - entries.each do |e|
+    blockquote = e
+
+  hr

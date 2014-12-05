@@ -22,6 +22,8 @@ group :development, :test do
   gem 'ruby-prof'
   gem 'sqlite3'
   gem 'spring'
+  gem 'rspec'
+  gem 'spring-commands-rspec'
 end
 
 # Use jquery as the JavaScript library
@@ -59,3 +61,5 @@ gem 'hiredis'
 gem 'io-extra', require: 'io/extra'
 gem 'heroku-deflater'
 gem 'rails_config'
+gem 'sanitize'
+gem 'timecop'
