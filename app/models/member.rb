@@ -1,4 +1,6 @@
 class Member < ActiveRecord::Base
+  has_many :entries
+
   def yesterday_entries
     Entry.where(
       member_id: self.id,

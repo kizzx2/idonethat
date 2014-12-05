@@ -22,8 +22,10 @@ group :development, :test do
   gem 'ruby-prof'
   gem 'sqlite3'
   gem 'spring'
+  gem 'rspec'
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
+  gem 'database_cleaner'
 end
 
 # Use jquery as the JavaScript library
@@ -63,3 +65,8 @@ gem 'heroku-deflater'
 gem 'rails_config'
 gem 'sanitize'
 gem 'timecop'
+gem 'factory_girl_rails'
+gem 'ffaker'
+gem 'zurb-ink-rails'
+gem 'nokogiri'
+gem 'premailer-rails'

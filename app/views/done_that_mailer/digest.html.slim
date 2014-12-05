@@ -1,4 +1,4 @@
-Here's what people got done yesterday:
+h2 Here's what people got done yesterday:
 
 - Member.all.each do |m|
   h3 #{m.name} (#{m.email})
@@ -10,6 +10,6 @@ Here's what people got done yesterday:
       span #{m} has been doing nothing for #{m.idle_days} days!
 
   - entries.each do |e|
-    blockquote = e
+    blockquote = e.body
 
   hr
