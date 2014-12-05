@@ -1,2 +1,3 @@
 idonethat:
   from_email: <%= ENV['IDONETHAT_FROM_EMAIL'] %>
+  digest_time: <%= ENV['IDONETHAT_DIGEST_TIME'] %>
