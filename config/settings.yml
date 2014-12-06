@@ -1,3 +1,4 @@
 idonethat:
   from_email: <%= ENV['IDONETHAT_FROM_EMAIL'] || ENV['CLOUDMAILIN_FORWARD_ADDRESS'] %>
   digest_time: <%= ENV['IDONETHAT_DIGEST_TIME'] || "12 hours" %>
+  time_zone: <%= ENV['IDONETHAT_TIME_ZONE'] %>
