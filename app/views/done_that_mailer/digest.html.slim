@@ -7,7 +7,7 @@ h2 Here's what people got done yesterday:
   - if entries.empty?
     strong #{m.name} <em>did nothing yesterday!</em>
     - if m.idle_days > 1
-      span #{m} has been doing nothing for #{m.idle_days} days!
+      span #{m.name} has been doing nothing for #{m.idle_days} days!
 
   - entries.each do |e|
     blockquote = e.body
