@@ -1,6 +1,6 @@
 h2 Here's what people got done yesterday:
 
-- Member.all.each do |m|
+- Member.order('RANDOM()').each do |m|
   h3 #{m.name} (#{m.email})
 
   - entries = m.yesterday_entries.to_a
