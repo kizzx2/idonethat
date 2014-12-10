@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141205161311) do
+ActiveRecord::Schema.define(version: 20141210163555) do
 
   create_table "entries", force: true do |t|
     t.integer  "member_id",  null: false
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20141205161311) do
     t.integer  "idle_days",  default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "alias"
   end
 
 end

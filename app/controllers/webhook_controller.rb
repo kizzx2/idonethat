@@ -7,7 +7,8 @@ class WebhookController < ApplicationController
       body: params[:reply_plain] || params[:plain] || params[:html]
     }
 
-    m = Member.where(email: mail[:from]).first
+    m = Member.where(
+      'email = ? OR alias = ?', mail[:from], mail[:from]).first
     fail if m.nil?
 
     Entry.create!(member: m, body: Sanitize.clean(mail[:body]))
