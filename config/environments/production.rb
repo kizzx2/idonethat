@@ -76,6 +76,22 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  n = Settings[:idonethat][:exception_notification]
+  if n[:exception_recipients].present?
+    opts = {
+      email: {
+        sender_address: n[:sender_address],
+        exception_recipients: n[:exception_recipients]
+      }
+    }
+
+    if n[:subject_prefix]
+      opts[:email][:email_prefix] = "#{n[:subject_prefix]} "
+    end
+
+    config.middleware.use(ExceptionNotification::Rack, opts)
+  end
+
   ActionMailer::Base.smtp_settings = {
     :port =>           '587',
     :address =>        'smtp.mandrillapp.com',

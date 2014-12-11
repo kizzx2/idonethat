@@ -2,3 +2,8 @@ idonethat:
   from_email: <%= ENV['IDONETHAT_FROM_EMAIL'] || ENV['CLOUDMAILIN_FORWARD_ADDRESS'] %>
   digest_time: <%= ENV['IDONETHAT_DIGEST_TIME'] || "12 hours" %>
   time_zone: <%= ENV['IDONETHAT_TIME_ZONE'] %>
+
+  exception_notification:
+    sender_address: <%= ENV['IDONETHAT_EXCEPTION_NOTIFICATION_SENDER_ADDRESS'] %>
+    exception_recipients: <%= ENV['IDONETHAT_EXCEPTION_NOTIFICATION_EXCEPTION_RECIPIENTS'] %>
+    subject_prefix: <%= ENV['IDONETHAT_EXCEPTION_NOTIFICATION_SUBJECT_PREFIX'] %>
