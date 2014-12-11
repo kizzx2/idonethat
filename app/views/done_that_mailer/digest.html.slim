@@ -10,6 +10,6 @@ h2 Here's what people got done yesterday:
       span #{m.name} has been doing nothing for #{m.idle_days} days!
 
   - entries.each do |e|
-    blockquote = e.body
+    blockquote == e.body.gsub("\n", "<br />")
 
   hr
