@@ -4,6 +4,6 @@ class Member < ActiveRecord::Base
   def yesterday_entries
     Entry.where(
       member_id: self.id,
-      created_at: 1.day.ago.beginning_of_day..Time.zone.now)
+      created_at: (1.day.ago.beginning_of_day + 12.hours)..Time.zone.now)
   end
 end
