@@ -4,7 +4,7 @@ class WebhookController < ApplicationController
       to: params[:envelope][:to],
       from: params[:envelope][:from],
       subject: params[:headers]['Subject'],
-      body: params[:reply_plain] || params[:plain] || params[:html]
+      body: params[:reply_plain].presence || params[:plain].presence || params[:html].presence
     }
 
     m = Member.where(
